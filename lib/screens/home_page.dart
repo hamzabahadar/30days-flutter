@@ -1,12 +1,28 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:practice/models/catalogue.dart';
 import 'package:practice/widgets/drawer.dart';
 import 'package:practice/widgets/item_widget.dart';
 
 // ignore: use_key_in_widget_constructors
-class HomePage extends StatelessWidget {
-  final int days = 30;
-  final String name = "Hamza";
+class HomePage extends StatefulWidget {
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  loadData() async {
+    var catalogJson = await rootBundle.loadString("files/catalog.json");
+    final decodedData = jsonDecode(catalogJson);
+    var productsData = decodedData["products"];
+  }
 
   @override
   Widget build(BuildContext context) {
