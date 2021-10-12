@@ -7,7 +7,7 @@ class MyDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       child: Container(
-        color: Colors.deepPurple,
+        color: Colors.white,
         child: ListView(
           children: [
             DrawerHeader(
@@ -16,6 +16,9 @@ class MyDrawer extends StatelessWidget {
                 margin: EdgeInsets.zero,
                 accountName: Text("Hamza"),
                 accountEmail: Text("hamza@gmail.com"),
+                decoration: BoxDecoration(
+                  color: Colors.grey[850],
+                ),
                 currentAccountPicture: CircleAvatar(
                   backgroundImage: NetworkImage(
                       "https://images.pexels.com/photos/1987301/pexels-photo-1987301.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"),
@@ -25,39 +28,39 @@ class MyDrawer extends StatelessWidget {
             ListTile(
               leading: Icon(
                 Icons.home,
-                color: Colors.white,
+                color: Colors.black,
               ),
               title: Text(
                 "Home",
                 textScaleFactor: 1.2,
                 style: TextStyle(
-                  color: Colors.white,
+                  color: Colors.black,
                 ),
               ),
             ),
             ListTile(
               leading: Icon(
                 Icons.account_circle,
-                color: Colors.white,
+                color: Colors.black,
               ),
               title: Text(
                 "Profile",
                 textScaleFactor: 1.2,
                 style: TextStyle(
-                  color: Colors.white,
+                  color: Colors.black,
                 ),
               ),
             ),
             ListTile(
               leading: Icon(
                 Icons.email,
-                color: Colors.white,
+                color: Colors.black,
               ),
               title: Text(
                 "Email Me",
                 textScaleFactor: 1.2,
                 style: TextStyle(
-                  color: Colors.white,
+                  color: Colors.black,
                 ),
               ),
             ),
